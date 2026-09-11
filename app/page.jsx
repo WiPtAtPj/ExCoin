@@ -273,6 +273,9 @@ if (error || !user) {
         <div style={{ maxWidth: 380, margin: '60px auto', background: '#fff', padding: 32, borderRadius: 14, boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
           <h2 style={{ textAlign: 'center', margin: '0 0 6px', color: '#1e293b' }}>위즈덤하우스</h2>
           <p style={{ textAlign: 'center', fontSize: 13, color: '#64748b', margin: '0 0 24px' }}>임원 예산 조회 시스템</p>
+          <div style={{ fontSize: 11, color: '#94a3b8', marginBottom: 10, wordBreak: 'break-all' }}>
+  현재 설정된 DB 주소: {process.env.NEXT_PUBLIC_SUPABASE_URL || '미설정'}
+</div>
           <form onSubmit={handleLogin}>
             <div style={{ marginBottom: 14 }}>
               <label style={{ fontSize: 13, fontWeight: 'bold', color: '#475569' }}>아이디 (사번)</label>
