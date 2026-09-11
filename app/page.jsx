@@ -35,8 +35,9 @@ export default function Home() {
       .eq('password_hash', password.trim())
       .single();
 
-    if (error || !user) {
-      setMsg('아이디 또는 비밀번호가 일치하지 않습니다.');
+if (error || !user) {
+      setMsg(error ? `[DB 접속 오류] ${error.message}` : '아이디 또는 비밀번호가 일치하지 않습니다.');
+      console.error('로그인 상세 에러:', error);
       return;
     }
 
